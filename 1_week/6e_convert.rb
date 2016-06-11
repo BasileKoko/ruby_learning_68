@@ -7,24 +7,29 @@
 # doctest: Convert 98 should not return 36
 # >> convert(98).round(6)
 # => 36.666667
-def convert(degree_farhenheit)
+def to_celsius(degree_farhenheit)
   celsius = (degree_farhenheit - 32.0) * 5/9
 end
-if __FILE__ == $PROGRAM_NAME # Application Guard or Library Guard.
-[-40, 0, 32, 98.6, 98, 100, 212].each do |f_temp|
-  c_temp = convert(f_temp)
-  puts "%0.2fF equal %0.2f degree Celsius." %
-    [c_temp, f_temp,]
-end
+alias convert to_celsius
+
+if __FILE__ == $PROGRAM_NAME
+  [
+    -40,    0,
+    32,   98.6,
+    98,  100,
+    212
+  ].each do |f_temp|
+    c_temp = convert(f_temp)
+    puts "%0.2<f_temp>fF equal %0.2<c_temp>f degree Celsius." %
+      [f_temp: f_temp, c_temp: c_temp]
+  end
 end
 
 
 # Things I like about the current convert method
-# it gets the job done
-# the arguments are well detailed
-# values are returned as we expected
+# it gets the job done  - true
+# the arguments are well detailed - true
+# values are returned as we expected - true
 # Things I don't like about the current convert method
-#arguments are very long
-# complex operation within the method
-# we can do better job at rounding the result
-# lines are too long within the method
+# I don't like creating a local variable that I never use.
+#
