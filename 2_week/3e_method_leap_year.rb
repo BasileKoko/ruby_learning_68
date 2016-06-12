@@ -26,7 +26,7 @@ doctest : leap year
 >> leap_year?
 => true
 doctest : nonleap year
->>leap_year
+>>leap_year?
 => false
 doctest : calculate minutes
 >>leap_year2?(year)
