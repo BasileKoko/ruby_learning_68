@@ -1,4 +1,9 @@
+<<<<<<< HEAD
 # Challenge 1 week2
+=======
+
+# Challenge 1 week1
+>>>>>>> 1c_prompt.rb
 # file called prompt.rb
 
 module Promptable 
