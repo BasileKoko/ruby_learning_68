@@ -1,4 +1,4 @@
-# Challenge 1 week1
+# Challenge 1 week2
 # file called prompt.rb
 
 module Promptable 
