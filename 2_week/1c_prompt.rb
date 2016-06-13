@@ -1,16 +1,13 @@
-# Challenge 1 week1
+# Challenge 1 week2
 # file called prompt.rb
 
-Promptable
-def prompt message
+module Promptable
+def self.prompt message
   puts message
   answer = gets.chomp
-  answer
 end
 
-name = prompt "What is your name? :>"
-puts name
-puts "Your name is #{name}"
-names << name
+  name = prompt "What is your name? :>"
+  puts "Your name is #{name}"
 
-puts names
+end
