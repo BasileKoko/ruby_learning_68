@@ -1,10 +1,6 @@
 def odd_even(collection)
   collection.map do|element| 
-     if element.odd?
-       "#{element} is odd"
-     else
-       "#{element} is even"
-     end
+     element.odd? ? "#{element} is odd" : "#{element} is even"
    end
 end
 
