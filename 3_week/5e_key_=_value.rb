@@ -1,17 +1,13 @@
-#s1(names) = "Mary,Luke,Michelle,Thomas"
-
-#s2(ages) = "21,24,54,18"
-
-def key_value(s1, s2)
-
-keys = s1.split(',')
-
-values = s2.split(',')
-
-hash =  keys.zip(values)
-
-hash.map { |el| "#{el[0]}=#{el[1]}"}.join(' ')
-
+def key_value(s)
+array = s.split('=')
+hash = {}
+s1 = array[0]
+s2 = array[1]
+hash[s1] = s2
+hash.each do|k, v| 
+puts k
+puts v
+end
 end
 
-puts key_value("Mary,Luke,Michelle,Thomas", "21,24,54,18" )
+key_value('name=2')
