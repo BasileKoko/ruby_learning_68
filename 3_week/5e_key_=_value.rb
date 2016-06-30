@@ -1,13 +1,8 @@
 def key_value(s)
-array = s.split('=')
-hash = {}
-s1 = array[0]
-s2 = array[1]
-hash[s1] = s2
-hash.each do|k, v| 
-puts k
-puts v
-end
+ array = s.split('=')
+ s1 = array[0]
+ s2 = array[1]
+ "s1 = #{s1}\ns2 = #{s2}"
 end
 
-key_value('name=2')
+puts key_value('name=2')
