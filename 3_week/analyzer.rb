@@ -1,4 +1,6 @@
-def text_analyzer(filename='text.txt')
+module Analyzer
+
+def self.text_analyzer(filename='text.txt')
  File.readlines(filename)
 end
 
@@ -22,3 +24,5 @@ puts "#{sentences_count} sentences\n"
 puts "#{paragraphs_count} paragraphs\n"
 puts "#{average_number_words_per_sentence} average words per sentence\n"
 puts "and #{average_number_sentence_paragraph} average sentences per paragraph"
+
+end
