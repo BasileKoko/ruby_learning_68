@@ -8,3 +8,4 @@
 def split(text)
   text.split("\n").map {|l| "Line #{array.index(l).next}: #{l}\n"}.join
 end
+
