@@ -1,41 +1,35 @@
 class Shapes
-  def initialize(shape)
-  @shape = shape
+  def initialize(name)
+  @name = name
   end
-  def rotate
-    "#{@shape} rotates 360 degree"
+  def click
+    "#{@name} rotates 360 degree"
+  end
+  
+  def play_sound
+  "#{@name} is playing #{@name}_sound"
   end
 end
 
 class Square < Shapes
-
-  def play_sound
-    "#{@shape} playing square_sound"
-  end
 end
 
 class Circle < Shapes
-  def play_sound
-    "#{@shape} playing circle_sound"
-  end
 end
 
 class Rectangle < Shapes
-  def play_sound
-    "#{@shape} playing rectangle_sound"
-  end
 end
 
 
-s = Square.new("square_shape")
-puts s.rotate
+s = Square.new("sq")
+puts s.click
 puts s.play_sound
 
-c = Circle.new("circle_shape")
-puts c.rotate
+c = Circle.new("cr")
+puts c.click
 puts c.play_sound
 
-r = Rectangle.new("rectangle_shape")
-puts r.rotate
+r = Rectangle.new("rec")
+puts r.click
 puts r.play_sound
 
