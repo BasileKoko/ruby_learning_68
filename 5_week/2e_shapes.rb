@@ -1,13 +1,21 @@
 class Shapes
-  def initialize(name)
+
+  def initialize(name='shapes', sound='.AIF')
   @name = name
+  @sound = sound
   end
+  
   def click
+   puts rotate
+   puts play_sound 
+  end
+  
+  def rotate
     "#{@name} rotates 360 degree"
   end
   
   def play_sound
-  "#{@name} is playing #{@name}_sound"
+  "#{@name} is playing #{@sound} sound"
   end
 end
 
@@ -21,15 +29,12 @@ class Rectangle < Shapes
 end
 
 
-s = Square.new("sq")
-puts s.click
-puts s.play_sound
+[
+Square.new('sq'),
+Circle.new('cr'),
+Rectangle.new('rec')
 
-c = Circle.new("cr")
-puts c.click
-puts c.play_sound
+].each(&:click)
 
-r = Rectangle.new("rec")
-puts r.click
-puts r.play_sound
+
 
