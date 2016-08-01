@@ -1,3 +1,4 @@
+
 puts 'WELCOME TO BASILE REPL'
 
 def repl_method(input = nil)
@@ -5,7 +6,7 @@ def repl_method(input = nil)
   entry = gets.chomp
   if entry =~ /exit|quit|q/i
     puts 'exiting repl'
-    abort
+    exit
   else
     result = eval(entry)
     puts("=> #{result}")
