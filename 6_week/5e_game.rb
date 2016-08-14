@@ -10,9 +10,9 @@ end
 
 
 def load_game(f1)
-  array = File.readlines(f1)
+    score = File.open(f1, &:readline)
     if File.mtime(f1) == File.birthtime(f1)
-      "Your score is #{array[0]}" 
+      "Your score is #{score}" 
     else
       raise "I suspect you of cheating."
    end
