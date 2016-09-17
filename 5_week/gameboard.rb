@@ -4,14 +4,13 @@ class GameBoard
     @l = l
   end
   
-  #@noofhits = 0
-  
+  @@noofhits = 0
   
   def check_yourself(user_guess)
     if @l.include?(user_guess.to_i)
       puts "Hit"
-     @noofhits += 1
-     "kill" if @noofhits == 3
+     @@noofhits += 1
+     "kill" if @@noofhits == 3
     else
      puts "Miss"
     end 

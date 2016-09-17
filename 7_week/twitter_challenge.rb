@@ -1,0 +1,1 @@
+ruby -e 'puts "twitter".chars.map.each_with_index {|el, i| "Index #{i} => #{el.upcase}"}'
