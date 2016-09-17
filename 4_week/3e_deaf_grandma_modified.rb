@@ -19,5 +19,3 @@ def deaf_granny
     end
   end
 end
-
-deaf_granny()
